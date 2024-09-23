@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        .canvas {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(20px, 1fr));
+        }
+        .grid {
+            width: 10px;
+            height: 10px;
+            border: solid 1px rgb(160, 95, 107);
+        }
+    </style>
+</head>
+<body>
+    <div style="font-size: xx-large; font-weight: 900; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+        Etch a Sketch
+    </div>
+    <div class="canvas" id="canvasContainer">
+        <div style="padding: 20px; font-size: xx-large; font-weight: bold; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; border: solid; width: 200px;">Pick Your Canvas</div>
+    </div>
+
+    <div style="margin-top: 20px;"></div>
+        Choose Your Pen Color: &nbsp;&nbsp;&nbsp;
+        <input type="color" id="colorPicker" value="#000000">
+    </div>
+    <div>Click & Drag on the canvas to draw</div>
+
+    <div style="margin-top: 20px;">
+        Choose Your Canvas Size: &nbsp;&nbsp;&nbsp;
+        <button onclick="createCanvas(32)">small</button>
+        <button onclick="createCanvas(40)">medium</button>
+        <button onclick="createCanvas(50)">large</button>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
